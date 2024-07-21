@@ -1,0 +1,114 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.game {
+    background-color: rgba(73, 59, 41, 0.745);
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.hand {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 100px;
+}
+.choices{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+
+
+}
+.choice{
+    background-color:transparent;
+    height: 70px;
+    width: 70px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0 ,0.8),
+    -2px -2px 10px rgba(0, 0, 0 ,0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    transition: transfrom 0.2s;
+}
+.choice:hover{
+   box-shadow: 4px 4px 10px rgba(153, 58, 23, 0.8),
+   -4px -4px 10px rgba(51, 103, 181, 0.835);
+   transform: scale(1.3);
+}
+.result{
+    width: 40%;
+    height: 10%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+transition: all 0.5s;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(73, 215, 54, 0.8)
+    ,inset -4px 10px rgba(31, 57, 224, 0.678);
+}
+
+  .win {
+    color: rgba(73, 215, 74, 0.8);
+    animation: win-animation 0.5s ease-in-out;
+  }
+
+  .lose {
+    color: rgba(222, 50, 16, 0.8);
+    animation: lose-animation 0.5s ease-in-out;
+  }
+
+  .draw {
+    color: rgba(16, 222, 19, 0.8);
+    box-shadow: inset 3px 4px 10px rgba(16, 222, 19, 0.8), inset -3px -4px 10px rgba(222, 50, 16, 0.8);
+    animation: draw-animation 0.5s ease-in-out;
+  }
+
+  @keyframes win-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes lose-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes draw-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
